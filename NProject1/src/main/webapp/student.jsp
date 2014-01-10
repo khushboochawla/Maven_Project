@@ -13,20 +13,38 @@
 <body>
    
     <form method="POST" action='StudentController'>
-        Student ID : <input type="text" readonly="readonly" name="studentId"
-            value="${student.studentId}" /> <br />  <br /> 
-       Name : <input
+    <div id="maindiv" style="border:5px solid black; margin:50px auto; width:400px; height:300px">
+        <div id="addstudent" style="margin:0 auto; width:165px; height:20px; border:1px solid white;padding-top: 20px">Add Student Details</div>
+        <div id="childcontainer" style="padding:30px; border:1px solid white;">
+        <div id="leftstudentid" style="float:left; border:1px solid white">
+        Student ID :</div>
+       
+        <div id="rightstudentid" style="float:right; border:1px solid white">
+        <input type="text" readonly="readonly" name="studentId"
+            value="" /></div> <br />  <br /> 
+       <div id="leftname" style="float:left; border:1px solid white ">
+       Name :</div> 
+       <div id="rightname" style="float:right; border:1px solid white">
+       <input
             type="text" name="studentName"
-            value="" /> <br />  <br /> 
-        Course : <input
+            value="" /></div> <br />  <br /> 
+        <div id="leftcourse" style="float:left; border:1px solid white">
+        Course : </div>
+        <div id="rightcourse" style="float:right; border:1px solid white">
+        <input
             type="text" name="courseName"
-            value="" /> <br />  <br /> 
-        Subject: <input
+            value="" /> </div><br />  <br /> 
+        <div id="leftsubject" style="float:left; border:1px solid white">
+        Subject:</div> 
+        <div id="rightsubject" style="float:right; border:1px solid white">
+        <input
             type="text" name="subjectName"
-           value="" /> <br /> <br /> 
-           
+           value="" /></div> <br /> <br /> 
+           <center>
              <input
             type="submit" value="Submit" />
+            </center></div>
+    </div>
     </form>
 </body>
 </html>
