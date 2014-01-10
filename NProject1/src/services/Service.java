@@ -3,13 +3,19 @@ package services;
 import java.awt.List;
 import java.sql.Connection;
 
+/**
+ * @author Tushar Choudhary
+ *
+ * This class is used to interact with db to fetch and return the results
+ */
+
 public class Service {
 	private Connection connection;
-	//util.DbUtil DbUtil;
+	util.DbUtil DbUtil;
 
 	public Service() {
 
-		//connection = DbUtil.getConnection();
+		connection = DbUtil.getConnection();
 	}
 
 	public Object getHighestMarksForSubject() {
