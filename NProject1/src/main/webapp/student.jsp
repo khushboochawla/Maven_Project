@@ -14,16 +14,16 @@
    
     <form method="POST" action='StudentController'>
         Student ID : <input type="text" readonly="readonly" name="studentId"
-            value="${student.studentId}" /> <br /> 
+            value="${student.studentId}" /> <br />  <br /> 
        Name : <input
             type="text" name="studentName"
-            value="${student.studentName}" /> <br /> 
+            value="" /> <br />  <br /> 
         Course : <input
             type="text" name="courseName"
-            value="${course.courseName}" /> <br /> 
+            value="" /> <br />  <br /> 
         Subject: <input
             type="text" name="subjectName"
-           value="${subject.subjectName}" /> <br />
+           value="" /> <br /> <br /> 
            
              <input
             type="submit" value="Submit" />
