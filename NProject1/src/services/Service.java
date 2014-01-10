@@ -1,13 +1,13 @@
-package service;
+package services;
 
 import java.awt.List;
 import java.sql.Connection;
 
-public class Services {
+public class Service {
 	private Connection connection;
 	//util.DbUtil DbUtil;
 
-	public Services() {
+	public Service() {
 
 		//connection = DbUtil.getConnection();
 	}
