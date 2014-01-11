@@ -7,7 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.daniel.model.Roles;
+import model.*;
+
+
 
 import model.Course;
 import model.Score;
@@ -29,8 +31,7 @@ public class Service {
 
 		connection = DbUtil.getConnection();
 	}
-
-	public List getHighestMarksForSubject(int subjectId) {
+	public List<Score> getHighestMarksForSubject(int subjectId) {
 		List<Score> marks = new ArrayList<Score>();
 		try {
 			Statement statement = connection.createStatement();
@@ -53,13 +54,13 @@ public class Service {
 		return marks;
 	}
 
-	public List<Subject> getSubjectList(int semesterId, int courseId) {
+	public List<Subject> getSubjectList(int semesterId, int courseId) {	
 		List<Subject> subjects = new ArrayList<Subject>();
 		try {
 			Statement statement = connection.createStatement();
 
-			ResultSet rs = statement.executeQuery("select * from subject where semesterId="+semesterId+" and courseId=1"+courseId);
-
+			ResultSet rs = statement.executeQuery("select * from subject where semesterId = 1 and courseId = 1");
+			
 			while (rs.next()) {
 				Subject subject = new Subject();
 				subject.setSubjectId(rs.getInt("subjectId"));
@@ -74,21 +75,69 @@ public class Service {
 
 	}
 
-	public List<Course> getCourseList() {
+	public List<Course> getCourseList() {	//tested output-tushar
 
+		List<Course> courses = new ArrayList<Course>();
+		try {
+			Statement statement = connection.createStatement();
+			ResultSet rs = statement.executeQuery("select * from course");
+			while (rs.next()) {
+				Course out = new Course();
+				out.setCourseId((rs.getInt("courseId")));
+				out.setCourseName((rs.getString("courseName")));
+				
+				courses.add(out);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return courses;
 		//select * from course;
 		
-		return null;
+		
 	}
 
-	public List getStudentList() {
-		//select * from student
-		return null;
+	public List<Student> getStudentList() {	//tested output-tushar
+
+		List<Student> students = new ArrayList<Student>();
+		try {
+			Statement statement = connection.createStatement();
+			ResultSet rs = statement.executeQuery("select * from student");
+			while (rs.next()) {
+				Student out = new Student();
+				out.setStudentId((rs.getInt("studentId")));
+				out.setCourseId((rs.getInt("courseId")));
+				out.setSemesterId((rs.getInt("semesterId")));
+				out.setStudentName((rs.getString("studentName")));
+				
+				students.add(out);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return students;
 	}
 
-	public List<Semester> getSemesterList() {
-		//select * from semester;
-		return null;
+	public List<Semester> getSemesterList() {	//tested output-tushar
+
+		List<Semester> sems = new ArrayList<Semester>();
+		try {
+			Statement statement = connection.createStatement();
+			ResultSet rs = statement.executeQuery("select * from semester");
+			while (rs.next()) {
+				Semester out = new Semester();
+				out.setSemesterId((rs.getInt("semesterId")));
+				out.setSemesterName((rs.getString("semesterName")));
+				
+				sems.add(out);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return sems;
 	}
 
 	public List getPiechartOutputs() {
