@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Course;
+import model.Score;
 import model.Semester;
+import model.Student;
 import model.Subject;
 import services.Service;
 
@@ -63,6 +65,18 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		Course course= new Course();
+		Score score= new Score();
+		Semester semester= new Semester();
+		Student student= new Student();
+		Subject subject = new Subject();
+		student.setStudentName(request.getParameter("name"));
+		course.setCourseName(request.getParameter("courseName"));
+		semester.setSemesterName(request.getParameter("semesterName"));
+		subject.setSubjectName(request.getParameter("subjectName"));
+		double marks=Double.parseDouble(request.getParameter("marks"));
+		score.setMarks(marks);
+		
 	}
 
 }
