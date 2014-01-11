@@ -32,6 +32,6 @@ CHOOSE SUBJECT:
 <option value="">4</option>
 </select></br>
 
-  <input type=submit name="drawPie"> <input type=submit name ="reset" value="reset"> 
+  <input type=submit name="drawPie"> <input type=reset name ="reset" value=reset> 
 </body>
 </html>

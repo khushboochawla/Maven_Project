@@ -3,15 +3,15 @@ package model;
 public class Score {
 
 	private int scoreId;
-	private int subId;
-	private String rollNumber;
+	private int subjectId;
+	private int studentId;
 	private double marks;
 	@Override
 	public String toString() {
-		return "Score [scoreId=" + scoreId + ", subId=" + subId
-				+ ", rollNumber=" + rollNumber + ", marks=" + marks
+		return "Score [scoreId=" + scoreId + ", subId=" + subjectId
+				+ ", studentId=" + studentId + ", marks=" + marks
 				+ ", getScoreId()=" + getScoreId() + ", getSubId()="
-				+ getSubId() + ", getRollNumber()=" + getRollNumber()
+				+ getSubjectId() + ", getRollNumber()=" + getStudentId()
 				+ ", getMarks()=" + getMarks() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
@@ -22,23 +22,24 @@ public class Score {
 	public void setScoreId(int scoreId) {
 		this.scoreId = scoreId;
 	}
-	public int getSubId() {
-		return subId;
+	public int getSubjectId() {
+		return subjectId;
 	}
 	public void setSubId(int subId) {
-		this.subId = subId;
+		this.subjectId = subId;
 	}
-	public String getRollNumber() {
-		return rollNumber;
-	}
-	public void setRollNumber(String rollNumber) {
-		this.rollNumber = rollNumber;
-	}
+	
 	public double getMarks() {
 		return marks;
 	}
 	public void setMarks(double marks) {
 		this.marks = marks;
+	}
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 	
 	

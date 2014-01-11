@@ -11,7 +11,7 @@ import java.sql.Connection;
 
 public class Service {
 	private Connection connection;
-	util.DbUtil DbUtil;
+	DbUtil DbUtil;
 
 	public Service() {
 

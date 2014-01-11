@@ -124,7 +124,7 @@ DROP TABLE IF EXISTS `subject`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `subject` (
   `subjectId` int(11) NOT NULL,
-  `subjectName` int(10) DEFAULT NULL,
+  `subjectName` varchar(45) DEFAULT NULL,
   `semesterId` int(10) DEFAULT NULL,
   `courseId` int(10) DEFAULT NULL,
   PRIMARY KEY (`subjectId`)
