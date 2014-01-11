@@ -3,9 +3,9 @@ package model;
 public class Student {
 
 	private int studentId;
-	private String studentname;
+	private String studentName;
 	private int courseId;
-	private int semId;
+	private int semesterId;
 
 	public int getStudentId() {
 		return studentId;
@@ -15,19 +15,19 @@ public class Student {
 		this.studentId = studentId;
 	}
 
-	public String getStudentname() {
-		return studentname;
+	public String getStudentName() {
+		return studentName;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [studentId=" + studentId + ", studentname="
-				+ studentname + ", courseId=" + courseId + ", semId=" + semId
+		return "Student [studentId=" + studentId + ", studentName="
+				+ studentName + ", courseId=" + courseId + ", semesterId=" + semesterId
 				+ "]";
 	}
 
-	public void setStudentname(String studentname) {
-		this.studentname = studentname;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
 
 	public int getCourseId() {
@@ -38,12 +38,12 @@ public class Student {
 		this.courseId = courseId;
 	}
 
-	public int getSemId() {
-		return semId;
+	public int getSemesterId() {
+		return semesterId;
 	}
 
-	public void setSemId(int semId) {
-		this.semId = semId;
+	public void setSemesterId(int semesterId) {
+		this.semesterId = semesterId;
 	}
 
 }

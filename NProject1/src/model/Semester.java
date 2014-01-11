@@ -2,28 +2,32 @@ package model;
 
 public class Semester {
 
-	private int semId;
-	private String semName;
-	public int getSemId() {
-		return semId;
+	private int semesterId;
+	private String semesterName;
+
+	public int getSemesterId() {
+		return semesterId;
 	}
-	public void setSemId(int semId) {
-		this.semId = semId;
+
+	public void setSemesterId(int semesterId) {
+		this.semesterId = semesterId;
 	}
-	public String getSemName() {
-		return semName;
+
+	public String getSemesterName() {
+		return semesterName;
 	}
-	public void setSemName(String semName) {
-		this.semName = semName;
+
+	public void setSemesterName(String semesterName) {
+		this.semesterName = semesterName;
 	}
+
 	@Override
 	public String toString() {
-		return "Semester [semId=" + semId + ", semName=" + semName
-				+ ", getSemId()=" + getSemId() + ", getSemName()="
-				+ getSemName() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+		return "Semester [semesterId=" + semesterId + ", semesterName="
+				+ semesterName + "]";
 	}
-	
-	
-}
 
+	
+	
+
+}
