@@ -8,43 +8,50 @@
     href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
-<title>Add new Student Data</title>
+<title>Add new student data</title>
 </head>
 <body>
-   
-    <form method="POST" action='StudentController'>
-    <div id="maindiv" style="border:5px solid black; margin:50px auto; width:400px; height:300px">
-        <div id="addstudent" style="margin:0 auto; width:165px; height:20px; border:1px solid white;padding-top: 20px">Add Student Details</div>
-        <div id="childcontainer" style="padding:30px; border:1px solid white;">
-        <div id="leftstudentid" style="float:left; border:1px solid white">
-        Student ID :</div>
-       
-        <div id="rightstudentid" style="float:right; border:1px solid white">
-        <input type="text" readonly="readonly" name="studentId"
-            value="" /></div> <br />  <br /> 
-       <div id="leftname" style="float:left; border:1px solid white ">
-       Name :</div> 
-       <div id="rightname" style="float:right; border:1px solid white">
-       <input
-            type="text" name="studentName"
-            value="" /></div> <br />  <br /> 
-        <div id="leftcourse" style="float:left; border:1px solid white">
-        Course : </div>
-        <div id="rightcourse" style="float:right; border:1px solid white">
-        <input
-            type="text" name="courseName"
-            value="" /> </div><br />  <br /> 
-        <div id="leftsubject" style="float:left; border:1px solid white">
-        Subject:</div> 
-        <div id="rightsubject" style="float:right; border:1px solid white">
-        <input
-            type="text" name="subjectName"
-           value="" /></div> <br /> <br /> 
-           <center>
+  
+    <form method="POST" action='StudetController'>
+        Student ID : <input type="text" readonly="readonly" name="userid"
+            value="${student.studentId}" /> <br /> 
+        Name : <input
+            type="text" name="name"
+            value="${student.name}" /> <br /> 
+          
+            
+             course : 
+            <select>
+            	<c:forEach items="${courses}" var="course">
+            	
+            	
+            	<option value="${course.courseName}">${course.courseName}</option>
+            </c:forEach>
+            </select> <br /> 
+               Semester : 
+            <select>
+            	<c:forEach items="${semesters}" var="semester">
+            	
+            	
+            	<option value="${semester.semesterName}">${semester.semesterName}</option>
+            </c:forEach>
+            </select> <br /> 
+            Subject : 
+            <select>
+            	<c:forEach items="${subjects}" var="subject">
+            	
+            	
+            	<option value="${subject.subjectName}">${subject.subjectName}</option>
+            </c:forEach>
+            </select>  Score : <input
+            type="text" name="score"
+            value="${score.marks}" /> <br /> 
+            <input
+            type="submit" value="Add" /> <br /> 
+      
+         
              <input
             type="submit" value="Submit" />
-            </center></div>
-    </div>
     </form>
 </body>
 </html>

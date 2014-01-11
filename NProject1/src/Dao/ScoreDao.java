@@ -38,7 +38,7 @@ public class ScoreDao {
 		List<Score> scores = new ArrayList<Score>();
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("select * from role");
+			ResultSet rs = statement.executeQuery("select * from score");
 			while (rs.next()) {
 				Score score = new Score();
 				score.setScoreId(rs.getInt("scoreId"));

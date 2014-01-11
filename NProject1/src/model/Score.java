@@ -11,7 +11,7 @@ public class Score {
 		return "Score [scoreId=" + scoreId + ", subId=" + subjectId
 				+ ", studentId=" + studentId + ", marks=" + marks
 				+ ", getScoreId()=" + getScoreId() + ", getSubId()="
-				+ getSubjectId() + ", getRollNumber()=" + getStudentId()
+				+ getSubjectId() + ", getStudentId()=" + getStudentId()
 				+ ", getMarks()=" + getMarks() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
