@@ -8,29 +8,57 @@
 </head>
 
 <body>
+<table>
+<tr>
+<td align="right">
 Class:
+</td>
+<td align="left">
+
 <select name="class">
 <option value="CSE">CSE</option>
 <option value="EC">EC</option>
 <option value="ME">ME</option>
 <option value="EN">EN</option>
-</select></br>
+</select><br>
 
+</td>
+</tr>
+<tr>
+<td align="right">
 Choose Semester:
+</td>
+<td align="left">
 <select name="semester">
 <option value="">1</option>
 <option value="">2</option>
 <option value="">3</option>
 <option value="">4</option>
-</select></br>
-  
+</select><br>
+</td>
+</tr>
+<tr>
+<td align="right">
 CHOOSE SUBJECT:
+</td>
+<td align="left">
 <select name="subject">
 <option value="">1</option>
 <option value="">2</option>
 <option value="">3</option>
 <option value="">4</option>
-</select></br>
+</select>
+</td>
+</tr>
+
+</table>
+
+
+
+
+  
+
+
 
   <input type=submit name="drawPie"> <input type=reset name ="reset" value=reset> 
 </body>
