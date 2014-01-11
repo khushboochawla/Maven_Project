@@ -4,25 +4,17 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
   <servlet>
-  	<servlet-name>semesterController</servlet-name>
-  	<display-name>semesterController</display-name>
+  	<servlet-name>Controller</servlet-name>
+  	<display-name>Controller</display-name>
   	<description></description>
-  	<servlet-class>Controller.semesterController</servlet-class>
+  	<servlet-class>controller.Controller</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>StudentController</servlet-name>
-  	<display-name>StudentController</display-name>
-  	<description></description>
-  	<servlet-class>Controller.StudentController</servlet-class>
-  </servlet>
+  
   <servlet-mapping>
-  	<servlet-name>semesterController</servlet-name>
-  	<url-pattern>/semesterController</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>StudentController</servlet-name>
-  	<url-pattern>/StudentController</url-pattern>
+  	<servlet-name>Controller</servlet-name>
+  	<url-pattern>/Controller</url-pattern>
   </servlet-mapping>
   
 </web-app>

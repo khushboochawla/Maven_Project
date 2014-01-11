@@ -12,7 +12,7 @@
 </head>
 <body>
   
-    <form method="POST" action='StudetController'>
+    <form method="POST" action='Controller'>
         Student ID : <input type="text" readonly="readonly" name="userid"
             value="${student.studentId}" /> <br /> 
         Name : <input

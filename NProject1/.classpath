@@ -30,5 +30,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/admin/Desktop/apache-tomcat-7.0.47-windows-x64/apache-tomcat-7.0.47/lib/servlet-api.jar" sourcepath="/Servers/Tomcat v7.0 Server at localhost-config"/>
+	<classpathentry kind="lib" path="C:/Users/xebiaPC/Downloads/java/apache-tomcat-7.0.47-windows-x64/apache-tomcat-7.0.47/lib/servlet-api.jar" sourcepath="C:/Users/xebiaPC/Desktop/java.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,7 +1,11 @@
 package services;
 
-import java.awt.List;
 import java.sql.Connection;
+import java.util.List;
+
+import model.Course;
+import model.Semester;
+import model.Subject;
 
 /**
  * @author Tushar Choudhary
@@ -24,18 +28,21 @@ public class Service {
 
 	}
 
-	public List getSubjectList() {
+	public List<Subject> getSubjectList() {
 
 		return null;
 	}
 
-	public List getCourseList() {
+	public List<Course> getCourseList() {
 
 		return null;
 	}
 
 	public List getStudentList() {
 
+		return null;
+	}
+	public List<Semester> getSemesterList(){
 		return null;
 	}
 
