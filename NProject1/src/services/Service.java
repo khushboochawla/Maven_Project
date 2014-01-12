@@ -43,7 +43,7 @@ public class Service {
 				Score scores = new Score();
 				scores.setMarks(rs.getInt("sc.marks"));
 				scores.setStudentId(rs.getInt("sc.studentId"));
-				scores.setSubId(rs.getInt("sc.subjectId"));
+				scores.setSubjectId(rs.getInt("sc.subjectId"));
 
 				marks.add(scores);
 			}
@@ -159,6 +159,14 @@ public class Service {
 
 		return subjects;
 
+	}
+	
+	public int addStudent(Student student){   //  need a addStudent function in service that will insert the student in the db and return me the id.
+		return 0;
+	}
+	
+	public void addScore(Score score){  // need a addScore function in service that will insert the score in the db for a particular subject and for a particular student.
+		
 	}
 
 

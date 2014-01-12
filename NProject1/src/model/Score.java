@@ -25,7 +25,7 @@ public class Score {
 		return subjectId;
 	}
 
-	public void setSubId(int subId) {
+	public void setSubjectId(int subId) {
 		this.subjectId = subId;
 	}
 
