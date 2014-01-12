@@ -35,7 +35,8 @@
 
 				<option value="${subject.subjectId}">${subject.subjectName}</option>
 			</c:forEach>
-		</select> Score : <input type="text" name="score" value="${score.marks}" /> <br />
+		</select> 
+		Score : <input type="text" name="score" value="${score.marks}" /> <br />
 
 
 		<input type="submit" value="Submit" />

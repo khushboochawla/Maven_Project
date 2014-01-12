@@ -5,7 +5,7 @@
 <p>
 	<ul>
 	<li><a href="Controller?action=add">Add Student and Information</a></li>
-	<li><a href="selectpie.jsp">Generate Pies.</a></li>
+	<li><a href="Controller?action=viewpie">Generate Pies.</a></li>
 	</ul>
 </p>
 </body>

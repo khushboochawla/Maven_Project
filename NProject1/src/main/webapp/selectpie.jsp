@@ -15,12 +15,15 @@ Class:
 </td>
 <td align="left">
 
-<select name="class">
-<option value="CSE">CSE</option>
-<option value="EC">EC</option>
-<option value="ME">ME</option>
-<option value="EN">EN</option>
-</select><br>
+
+ <select
+			name="courses">
+			<c:forEach items="${courses}" var="course">
+
+
+				<option value="${course.courseId}">${course.courseName}</option>
+			</c:forEach>
+			</select><br/>
 
 </td>
 </tr>
@@ -29,12 +32,13 @@ Class:
 Choose Semester:
 </td>
 <td align="left">
-<select name="semester">
-<option value="">1</option>
-<option value="">2</option>
-<option value="">3</option>
-<option value="">4</option>
-</select><br>
+  <select name="semesters">
+		<c:forEach items="${semesters}" var="semester">
+
+
+			<option value="${semester.semesterId}">${semester.semesterName}</option>
+			</c:forEach>
+		</select> <br /> 
 </td>
 </tr>
 <tr>
@@ -42,12 +46,13 @@ Choose Semester:
 CHOOSE SUBJECT:
 </td>
 <td align="left">
-<select name="subject">
-<option value="">1</option>
-<option value="">2</option>
-<option value="">3</option>
-<option value="">4</option>
-</select>
+  <select name="subjects">
+			<c:forEach items="${subjects}" var="subject">
+
+
+				<option value="${subject.subjectId}">${subject.subjectName}</option>
+			</c:forEach>
+		</select> 
 </td>
 </tr>
 
