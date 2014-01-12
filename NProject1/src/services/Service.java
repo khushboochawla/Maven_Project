@@ -140,6 +140,28 @@ public class Service {
 		return sems;
 	}
 
+	public List<Subject> getSubjectList() {	
+		List<Subject> subjects = new ArrayList<Subject>();
+		try {
+			Statement statement = connection.createStatement();
+
+			ResultSet rs = statement.executeQuery("select * from subject");
+			
+			while (rs.next()) {
+				Subject subject = new Subject();
+				subject.setSubjectId(rs.getInt("subjectId"));
+				subject.setSubjectName(rs.getString("subjectName"));
+				subjects.add(subject);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return subjects;
+
+	}
+
+
 	public List getPiechartOutputs() {
 
 		return null;
