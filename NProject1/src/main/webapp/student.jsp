@@ -13,33 +13,33 @@
 </head>
 <body>
 
-	<form method="POST" action='Controller' name="frmAddUser">
-		Student ID : <input type="text" readonly="readonly" name="studentid"
-			value="${student.studentId}" /> <br /> Name : <input type="text"
-			name="studentname" value="${student.name}" /> <br /> course : <select
-			name="courses">
-			<c:forEach items="${courses}" var="course">
+		<form method="POST" action='Controller' name="frmAddUser">
+			Student ID : <input type="text" readonly="readonly" name="studentid"
+				value="${student.studentId}" /> <br /> Name : <input type="text"
+				name="studentname" value="${student.name}" /> <br /> course : <select
+				name="courses">
+				<c:forEach items="${courses}" var="course">
+	
+	
+					<option value="${course.courseId}">${course.courseName}</option>
+				</c:forEach>
+			</select> <br /> Semester : <select name="semesters">
+				<c:forEach items="${semesters}" var="semester">
+	
+	
+					<option value="${semester.semesterId}">${semester.semesterName}</option>
+				</c:forEach>
+			</select> <br /> Subject : <select name="subjects">
+				<c:forEach items="${subjects}" var="subject">
+	
+	
+					<option value="${subject.subjectId}">${subject.subjectName}</option>
+				</c:forEach>
+			</select> 
+			Score : <input type="text" name="score" value="${score.marks}" /> <br />
 
-
-				<option value="${course.courseId}">${course.courseName}</option>
-			</c:forEach>
-		</select> <br /> Semester : <select name="semesters">
-			<c:forEach items="${semesters}" var="semester">
-
-
-				<option value="${semester.semesterId}">${semester.semesterName}</option>
-			</c:forEach>
-		</select> <br /> Subject : <select name="subjects">
-			<c:forEach items="${subjects}" var="subject">
-
-
-				<option value="${subject.subjectId}">${subject.subjectName}</option>
-			</c:forEach>
-		</select> 
-		Score : <input type="text" name="score" value="${score.marks}" /> <br />
-
-
-		<input type="submit" value="Submit" />
-	</form>
+	
+			<input type="submit" value="Submit" />
+		</form>
 </body>
 </html>

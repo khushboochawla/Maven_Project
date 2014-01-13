@@ -43,7 +43,7 @@ public class Controller extends HttpServlet {
 		// TODO Auto-generated method stub
 		String forward = "";
 		String action = request.getParameter("action");
-
+		
 		if (action.equalsIgnoreCase("add")) {
 
 			List<Course> courses = service.getCourseList();// need a function in
@@ -67,6 +67,7 @@ public class Controller extends HttpServlet {
 			request.setAttribute("semesters", semesters);
 			request.setAttribute("subjects", subjects);
 			forward = INSERT;
+		
 		} else if (action.equalsIgnoreCase("viewpie")) {
 
 			List<Course> courses = service.getCourseList();// need a function in

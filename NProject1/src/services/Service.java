@@ -5,16 +5,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import model.*;
-
-
-
-import model.Course;
-import model.Score;
-import model.Semester;
-import model.Subject;
 
 /**
  * @author Tushar Choudhary
@@ -31,28 +26,27 @@ public class Service {
 
 		connection = DbUtil.getConnection();
 	}
-	public List<Score> getHighestMarksForSubject(int subjectId) {
-		List<Score> marks = new ArrayList<Score>();
+	public Map<String,Double> getHighestMarksForSubject(int subjectId) {
+		Map<String,Double> map=new HashMap<String,Double>();
 		try {
 			Statement statement = connection.createStatement();
 
 			ResultSet rs = statement
-					.executeQuery("select sc.marks, sc.studentId from score sc join student st on sc.studentId=st.studentId where sc.subjectId="
-							+ subjectId);
+					.executeQuery("select student.studentName,score.marks from student natural join score AND marks in( SELECT MAX(marks) from score where subjectId="+subjectId) ;
+			
 			while (rs.next()) {
-				Score scores = new Score();
-				scores.setMarks(rs.getInt("sc.marks"));
-				scores.setStudentId(rs.getInt("sc.studentId"));
-				scores.setSubjectId(rs.getInt("sc.subjectId"));
-
-				marks.add(scores);
+				map.put(rs.getString("student.studentName"),rs.getDouble("score.marks"));
+				
+				
 			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
-		return marks;
-	}
+		return map;
+			}
+		
 
 	public List<Subject> getSubjectList(int semesterId, int courseId) {	
 		List<Subject> subjects = new ArrayList<Subject>();
@@ -162,7 +156,10 @@ public class Service {
 	}
 	
 	public int addStudent(Student student){   //  need a addStudent function in service that will insert the student in the db and return me the id.
+		
+		
 		return 0;
+		
 	}
 	
 	public void addScore(Score score){  // need a addScore function in service that will insert the score in the db for a particular subject and for a particular student.
@@ -170,9 +167,28 @@ public class Service {
 	}
 
 
-	public List getPiechartOutputs() {
+	public List<Score> getPiechartOutputs(String subjectId) {
+		List<Score> subjectMarks = new ArrayList<Score>();
+		try {
+			Statement statement = connection.createStatement();
 
-		return null;
+			ResultSet rs = statement
+					.executeQuery("select sc.marks, sc.studentId from score sc join student st on sc.studentId=st.studentId where sc.subjectId="
+							+ subjectId);
+			while (rs.next()) {
+				Score scores=new Score();
+				scores.setMarks(rs.getInt("sc.marks"));
+				scores.setStudentId(rs.getInt("sc.studentId"));
+				scores.setSubjectId(rs.getInt("sc.subjectId"));
+
+				subjectMarks.add(scores);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return subjectMarks;
+
 	}
 
 }
